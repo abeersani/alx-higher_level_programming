@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-for d1 in range(0, 10):
-    for d2 in range(d1 + 1, 10):
-        if d1 == 8 and d2 == 9:
-            print("{}{}".format(d1, d2))
-        else:
-            print("{}{}".format(d1, d2), end=", ")
+number = 0
+while number <= 89:
+    if number % 10 == 0:
+        number += 1 + number // 10
+    print("{:02d}".format(number), end='\n' if number == 89 else ", ")
+    number += 1
